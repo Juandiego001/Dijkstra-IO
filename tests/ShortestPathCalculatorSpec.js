@@ -1,5 +1,5 @@
 
-describe("ShortestPath Calculator", function () {
+describe("Calculadora ShortestPath", function () {
 
   beforeEach(function() {
 
@@ -24,21 +24,21 @@ describe("ShortestPath Calculator", function () {
 
     });
 
-    it("library should be present", function() {
+    it("la biblioteca debe estar presente", function() {
         expect(ShortestPathCalculator).toBeDefined();
     });
 
-    it("test instance should be there", function() {
+    it("La instancia de prueba debe estar allí", function() {
         expect(sp).toBeDefined();
     });
 
-    it("should find valid route", function() {
+    it("debe encontrar una ruta válida", function() {
         var sp = new ShortestPathCalculator(nodes, paths);
         route = sp.findRoute(0,4);
         expect(route.mesg).toEqual("OK");
     });
 
-    it("should detect valid integers", function() {
+    it("debe detectar enteros válidos", function() {
         expect(ShortestPathCalculator.isInteger(1)).toBeTruthy();
         expect(ShortestPathCalculator.isInteger(0)).toBeTruthy();
         expect(ShortestPathCalculator.isInteger(99)).toBeTruthy();
@@ -50,7 +50,7 @@ describe("ShortestPath Calculator", function () {
     return /^\d+$/.test(i);
 }
 
-    it("should make suitable clean array for populating", function() {
+    it("debe hacer una matriz limpia adecuada para rellenar", function() {
         var nodes = [ 1,2,3,4 ];
         var sp = new ShortestPathCalculator(nodes, paths);
         sp.makeDistanceArrayFromNodes();
