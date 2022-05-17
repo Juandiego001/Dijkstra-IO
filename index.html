@@ -2,14 +2,22 @@
 <head>
 	<meta charset="utf-8">
 	<title>Calculadora del algoritmo de Dijkstra</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,200&display=swap" rel="stylesheet">
+	<link href="stylesheets/shortest-path.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-	<h1>Calculadora del algoritmo de Dijkstra</h1>
+	<h1>
+		Calculadora del algoritmo de Dijkstra<br />
+		Juan David Garzón - Mishele Tatiana Otavo - Juan Diego Cobo
+
+	</h1>
 
 	<div class="spgraph" id="graph"></div>
 	<p>
-		Number of nodes : <input type="text" id="numberOfNodes" style="width: 30px;" name="sp-nodes" value="5"/>
-		<input type="submit" value=" make table " 
+		Número de nodos: <input type="text" id="numberOfNodes" style="width: 30px;" name="sp-nodes" value="5"/>
+		<input class="inputBtn" type="submit" value=" make table " 
 			onclick="ShortestPathUtils.makeTable(document.getElementById('numberOfNodes').value);" />
 	</p>
 
@@ -19,10 +27,10 @@
 
 	<div id="distances2"></div>
 	<div id="results2"></div>
-	<div id="graph2" class="spgraph" ></div>
+	<div id="graph2" class="spgraph" viewBox="0 0 100 100"></div>
 
 
-	<link href="stylesheets/shortest-path.css" rel="stylesheet" type="text/css" />
+	<!-- Scripts -->
 	<script type="text/javascript" src="javascripts/d3.v3.min.js"></script>
 	<script type="text/javascript" src="javascripts/ShortestPathCalculator.js"></script>
 	<script type="text/javascript" src="javascripts/ShortestPathUtils.js"></script>

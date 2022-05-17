@@ -1,12 +1,49 @@
-
-svg
-{
-	border: 1px solid gray;
+* {
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto Flex', sans-serif;
 }
 
-.spgraph
-{
-	margin: 50px;
+h1 {
+	width: 100%;
+	display: flex;
+	font-size: 2rem;
+	color: white;
+	background-color: cornflowerblue;
+	height: 15vh;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+p {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	padding-left: 1rem;
+	font-size: 2rem;
+}
+
+input {
+	font-size: 2rem;
+	text-align: center;
+	border: 1px solid rgba(0,0,0,0.5);
+}
+
+.inputBtn:hover {
+	cursor: pointer;
+}
+
+select {
+	font-size: 2rem;
+}
+
+.spgraph {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .link

@@ -184,7 +184,7 @@ var ShortestPathUtils = {
                 if(distances[i].value != '' && parseInt(distances[i].value) && distances[i].value != 0) {
                     var fields = distances[i].name.split(':');
                     // alert(fields[0] + ' - ' + fields[1] + ' - ' + distances[i].value);
-                    paths.push({ source: parseInt(fields[0]), target: parseInt(fields[1]), distance: parseInt(distances[i].value) });
+                    paths.push({ source: parseInt(fields[0]), target: parseInt(fields[1]), distance: parseInt(distances[i].value * 100) });
                     tmpnd.push(parseInt(fields[0]),parseInt(fields[1]));
                 }
             }
