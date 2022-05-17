@@ -179,14 +179,14 @@ ShortestPathCalculator.prototype.formatResult = function() {
 
 	var res = "";
 
-	res += "<p>Result : " + this.result.mesg + "</p>";
+	res += "<p>Resultado : " + this.result.mesg + "</p>";
 
 	if(this.result.path === null)
-		return "<p>No path found from " + this.result.source + " to " + this.result.target + "</p>";
+		return "<p>No se encontró un camino desde " + this.result.source + " hacia " + this.result.target + "</p>";
 
 	if(this.result.path.length === 0)
-		return "<p>Path is from " + SpUtils.nodeNames[this.result.source] + " to "
-			+ SpUtils.nodeNames[this.result.target] + ". Expect a journey time of approximately zero.</p>"
+		return "<p>El camino desde " + SpUtils.nodeNames[this.result.source] + " hacia "
+			+ SpUtils.nodeNames[this.result.target] + ". Se esperaba un tiempo de viaje de.</p>"
 
 	res += "<p>Path   : ";
 
@@ -198,7 +198,7 @@ ShortestPathCalculator.prototype.formatResult = function() {
 		res += ' ' + sourceNode.value + ' -> ' + targetNode.value;
 	}
 	res += "</p>";
-	res += "<p>Distance : " + this.result.distance + "</p>";
+	res += "<p>Distancia : " + this.result.distance + "</p>";
 
 	return res;
 
