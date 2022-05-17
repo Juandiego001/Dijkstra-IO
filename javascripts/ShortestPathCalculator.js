@@ -15,10 +15,10 @@ var ShortestPathCalculator = function(nodes, paths) {
 	var maxNodes = 20;
 	var minNodes = 3;
 
-	if(!d3) throw new ShortestPathCalculator.SpcError(10, 'D3 library not found');
+	if(!d3) throw new ShortestPathCalculator.SpcError(10, 'D3 Libreria no encontrada');
 
 	if(!nodes.length || nodes.length > maxNodes || nodes.length < minNodes)
-		throw new ShortestPathCalculator.SpcError(11, 'Nodes format invalid => ' + JSON.stringify(nodes) );
+		throw new ShortestPathCalculator.SpcError(11, 'Nodo no encontrado => ' + JSON.stringify(nodes) );
 
 }
 
@@ -35,10 +35,10 @@ ShortestPathCalculator.SpcError = function(code, message) {
 ShortestPathCalculator.prototype.findRoute = function(source, target) {
 
 	if(!ShortestPathCalculator.isInteger(source) || !ShortestPathCalculator.isInteger(target))
-		throw new ShortestPathCalculator.SpcError(20, "Source and target must be ints");
+		throw new ShortestPathCalculator.SpcError(20, "El origen y el destino deben ser ints");
 
 	if(source > this.nodes.length - 1|| target > this.nodes.length - 1)
-		throw new ShortestPathCalculator.SpcError(21, "Source or target put of range");
+		throw new ShortestPathCalculator.SpcError(21, "Origen u destino de rango");
 
 	this.makeDistanceArrayFromNodes();
 
@@ -188,7 +188,7 @@ ShortestPathCalculator.prototype.formatResult = function() {
 		return "<p>El camino desde " + SpUtils.nodeNames[this.result.source] + " hacia "
 			+ SpUtils.nodeNames[this.result.target] + ". Se esperaba un tiempo de viaje de.</p>"
 
-	res += "<p>Path   : ";
+	res += "<p>Ruta   : ";
 
 	for(var i=0; i<this.result.path.length; i++) {
 		var sourceNodeIndex = this.result.path[i].source;
@@ -295,7 +295,7 @@ ShortestPathCalculator.prototype.dijkstra = function(start, end) {
         return {mesg:'OK', path: newPath, source: start, target: end, distance:totalDistance};
     } 
     else {
-        return {mesg:'No path found', path: null, source: start, target: end, distance: 0 };
+        return {mesg:'Ruta no encontrada', path: null, source: start, target: end, distance: 0 };
     }
     
     function distanceBetween(fromNode, toNode, distances) {

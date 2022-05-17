@@ -24,12 +24,12 @@ var ShortestPathUtils = {
             nodes = parseInt(nodes);
 
             if(nodes>ShortestPathUtils.maxNodesforDemo) {
-                alert("Maximum nodes for this demo is " + ShortestPathUtils.maxNodesforDemo)
+                alert("Ha alcanzado el limite maximo de nodos" + ShortestPathUtils.maxNodesforDemo)
                 return;
             }
 
             if(nodes<ShortestPathUtils.minNodesforDemo) {
-                alert("You need at least 3 nodes to calculate a shortest path")
+                alert("Necesita al menos 3 nodos para calcular una ruta más corta")
                 return;
             }
 
