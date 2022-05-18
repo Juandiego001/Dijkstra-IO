@@ -198,7 +198,7 @@ ShortestPathCalculator.prototype.formatResult = function() {
 		res += ' ' + sourceNode.value + ' -> ' + targetNode.value;
 	}
 	res += "</p>";
-	res += "<p>Distancia : " + this.result.distance + "</p>";
+	res += "<p>Distancia : " + (this.result.distance / 100) + "</p>";
 
 	return res;
 
